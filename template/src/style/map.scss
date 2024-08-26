@@ -1,0 +1,202 @@
+#mapcontainer {
+  width: 100%;
+  height: 100%;
+
+  .container {
+    width: 100%;
+    height: 100%;
+
+    .maptalks-control {
+      display: none;
+    }
+  }
+
+  .map-ctrl-bottom-right {
+    right: 15px;
+    bottom: 135px;
+    position: relative;
+    width: 30px;
+    float: right;
+  }
+
+  .map-ctrl-group {
+    border-radius: 4px;
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .map-ctrl-group>div {
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+  }
+
+
+  .map-ctrl-zoom-out {
+    background-image: url("../assets/images/map/zoomOut.svg")
+  }
+
+  .map-ctrl-zoom-in {
+    background-image: url("../assets/images/map/zoomIn.svg")
+  }
+
+  .map-ctrl-map-2d {
+    background-image: url("../assets/images/map/2D.svg");
+    background-size: 95%;
+  }
+
+  .map-ctrl-map-3d {
+    background-image: url("../assets/images/map/3D.svg");
+    background-size: 95%;
+  }
+
+  .map-ctrl-full-screen {
+    background-image: url("../assets/images/map/funscreen.svg");
+    background-size: 95%;
+  }
+
+  .map-ctrl-exit-out {
+    background-image: url("../assets/images/map/exit_full_screen.svg");
+    background-size: 95%;
+  }
+
+  .map-ctrl-out-map {
+    background-image: url("../assets/images/map/out-map.svg");
+    background-size: 95%;
+  }
+
+  .map-ctrl-compass-arrow {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-image: url("../assets/images/map/rotate.svg");
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  // 顶部工具栏
+  #layerbox {
+    padding: 14px 0 13px;
+    background: #fff;
+    z-index: 112;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
+    position: absolute;
+    cursor: move;
+    right: 15px;
+    top: 15px;
+    height: 45px;
+
+    #layerbox_item {
+      background: #fff;
+      border-radius: 3px;
+      height: 18px;
+
+      .show-list {
+        position: relative;
+
+        .item {
+          float: left;
+          height: 18px;
+          padding: 0 12px;
+          font-size: 12px;
+          border-left: 1px #dbdee2 dashed;
+          vertical-align: middle;
+          cursor: pointer;
+          overflow: visible;
+          zoom: 1;
+          color: #5f6477;
+
+          &:hover {
+            color: #009cf9;
+          }
+
+          &.active {
+            color: #009cf9;
+          }
+
+          &:visited {
+            color: #009cf9;
+          }
+
+          &:active {
+            color: #009cf9;
+          }
+
+          &:first-child {
+            border-left: 0;
+            position: relative;
+            z-index: 999999999;
+          }
+
+          .name {
+            line-height: 18px;
+          }
+
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            float: left;
+          }
+
+          .icon {
+            width: 20px;
+            height: 18px;
+            line-height: 18px;
+            margin-right: 6px;
+            color: #7c8196;
+
+            .icon-satellite:before {
+              content: "\e61c";
+            }
+
+            .iconfont {
+              width: 20px;
+              height: 18px;
+              line-height: 18px;
+              font-size: 18px;
+              font-family: iconfont !important;
+              font-style: normal;
+              -webkit-font-smoothing: antialiased;
+            }
+          }
+
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            float: left;
+          }
+        }
+      }
+    }
+  }
+  
+  .satellite .box-card {
+    margin-left: -30px;
+  }
+
+  //图层
+  .box-card {
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -52px;
+    height: auto;
+
+    .el-card__body {
+      padding: 15px 10px 20px 10px;
+    }
+  }
+}

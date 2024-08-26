@@ -1,0 +1,100 @@
+{
+  "glyphs": [
+    {
+      "name": "岗位管理",
+      "font_class": "gangweiguanli"
+    },
+    {
+      "name": "定时任务",
+      "font_class": "dingshirenwu"
+    },
+    {
+      "name": "角色管理",
+      "font_class": "jueseguanli"
+    },
+    {
+      "name": "操作日志",
+      "font_class": "caozuorizhi"
+    },
+    {
+      "name": "缓存监控",
+      "font_class": "huancunjiankong"
+    },
+    {
+      "name": "登录日志",
+      "font_class": "denglurizhi"
+    },
+    {
+      "name": "代码生成",
+      "font_class": "daimashengcheng"
+    },
+    {
+      "name": "表单管理",
+      "font_class": "biaodangoujian"
+    },
+    {
+      "name": "菜单管理",
+      "font_class": "caidanguanli"
+    },
+    {
+      "name": "系统工具",
+      "font_class": "xitonggongju"
+    },
+    {
+      "name": "字典管理",
+      "font_class": "zidianguanli"
+    },
+    {
+      "name": "文件信息",
+      "font_class": "wenjianxinxi"
+    },
+    {
+      "name": "日志管理",
+      "font_class": "rizhiguanli"
+    },
+    {
+      "name": "系统监控",
+      "font_class": "xitongjiankong"
+    },
+    {
+      "name": "首页",
+      "font_class": "shouye"
+    },
+    {
+      "name": "在线用户",
+      "font_class": "zaixianyonghu"
+    },
+    {
+      "name": "用户管理",
+      "font_class": "yonghuguanli"
+    },
+    {
+      "name": "缓存列表",
+      "font_class": "huancunliebiao"
+    },
+    {
+      "name": "参数设置",
+      "font_class": "canshushezhi"
+    },
+    {
+      "name": "分类字典",
+      "font_class": "fenleizidian"
+    },
+    {
+      "name": "系统接口",
+      "font_class": "xitongjiekou"
+    },
+    {
+      "name": "服务监控",
+      "font_class": "fuwujiankong"
+    },
+    {
+      "name": "数据监控",
+      "font_class": "shujujiankong"
+    },
+    {
+      "name": "系统管理",
+      "font_class": "xitongguanli"
+    }
+  ]
+}

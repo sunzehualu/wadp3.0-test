@@ -1,74 +1,36 @@
-// https://eslint.org/docs/user-guide/configuring
-
+// ESlint 检查配置
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    sourceType: 'module'
   },
   env: {
     browser: true,
+    node: true,
+    es6: true,
   },
-  {{#if_eq lintConfig "standard"}}
-  extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential', 
-    // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-    'standard'
-  ],
-  {{/if_eq}}
-  {{#if_eq lintConfig "airbnb"}}
-  // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-  // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-  extends: ['plugin:vue/essential', 'airbnb-base'],
-  {{/if_eq}}
-  {{#if_eq lintConfig "none"}}
-  // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-  // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-  extends: ['plugin:vue/essential'],
-  {{/if_eq}}
-  // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
-  {{#if_eq lintConfig "airbnb"}}
-  // check if imports actually resolve
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: 'build/webpack.base.conf.js'
-      }
-    }
-  },
-  {{/if_eq}}
+  extends: ['plugin:vue/essential', 'eslint:recommended'],
+
   // add your custom rules here
+  //it is base on https://github.com/vuejs/eslint-config-vue
   rules: {
-    {{#if_eq lintConfig "standard"}}
-    // allow async-await
-    'generator-star-spacing': 'off',
-    {{/if_eq}}
-    {{#if_eq lintConfig "airbnb"}}
-    // don't require .vue extension when importing
-    'import/extensions': ['error', 'always', {
-      js: 'never',
-      vue: 'never'
-    }],
-    // disallow reassignment of function parameters
-    // disallow parameter object manipulation except for specific exclusions
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'state', // for vuex state
-        'acc', // for reduce accumulators
-        'e' // for e.returnvalue
-      ]
-    }],
-    // allow optionalDependencies
-    'import/no-extraneous-dependencies': ['error', {
-      optionalDependencies: ['test/unit/index.js']
-    }],
-    {{/if_eq}}
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    // 组件名称驼峰命名：关闭
+    "vue/multi-word-component-names": ["off"],
+    "no-console": "error",
+    "no-alert": "error",
+    "no-debugger": "error",
+    "no-mixed-spaces-and-tabs": [2, "smart-tabs"],
+    // 禁止不必要的转义字符（正则表达式错误）
+    "no-useless-escape": 0,
+    // 允许在正则表达式中使用控制字符（正则表达式错误）
+    'no-control-regex': 0,
+    // 警告未使用的变量、方法、计算属性
+    "vue/no-unused-properties": [
+      "warn",
+      {
+        groups: ["props", "data", "methods", "computed"]
+      }
+    ]
   }
 }

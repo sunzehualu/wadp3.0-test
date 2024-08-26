@@ -1,0 +1,20 @@
+:export {
+  menuText: #bfcbd9;
+  menuTextWhiteB: rgba(0, 0, 0, 0.65);
+  menuActiveText: #409EFF;
+  subMenuActiveText: #ffffff;
+  menuBg: #0c1943;
+  menuHover: #263445;
+  menuLightBg: #ffffff;
+  menuLightHover: #f0f1f5;
+  subMenuBg: #192b5a;
+  subMenuHover: #3a5286;
+  sideBarWidth: 220px;
+  sidebarTitle: #ffffff;
+  sidebarLightTitle: #001529;
+  menuBackground: #0c1943;
+  menuLightBackground: #ffffff;
+  logoTitleColor: #ffffff;
+  logoLightTitleColor: #666666;
+  themePrimary: #1890FF;
+}
